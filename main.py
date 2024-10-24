@@ -32,11 +32,11 @@ while coffee_machine_is_ON:
 
                 transaction_is_successful = MoneyMachine.make_payment(user_drink.cost)
 
-                MoneyMachine.report()
-
                 if transaction_is_successful:
 
                     CoffeeMaker.make_coffee(user_drink)
+
+                    MoneyMachine.report()
 
                 else:
 
